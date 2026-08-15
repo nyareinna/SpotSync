@@ -84,7 +84,7 @@ downloader_settings = {
 
 ### How to Customize Configuration
 
-To alter the default download config, edit the values inside the dictionary in `run_downloader.py`:
+To alter the default download config, edit the values inside the dictionary in `run_downloader.py` (line 152):
 
 * **Change Audio Format:** 
   Replace `"m4a"` with `"mp3"` or `"opus"`.
