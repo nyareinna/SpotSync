@@ -1,5 +1,5 @@
 # SpotSync
-SpotSync is a Python script that parses Spotify playlists, identifies the full album or release associated with each track, and downloads the entire album to help expand your local music library. It features automatic rate-limit management and exponential retry backoff logic for smooth, reliable downloads.
+SpotSync is a Python script that parses Public Spotify playlists, identifies the full album or release associated with each track, and downloads the entire album to help expand your local music library. It features automatic rate-limit management and exponential retry backoff logic for smooth, reliable downloads.
 
 ---
 
@@ -60,7 +60,7 @@ SpotSync is a Python script that parses Spotify playlists, identifies the full a
    * Your credentials will be saved locally in `spotify_credentials.json` for subsequent runs.
 
 3. **Download Tracks:**
-   * Enter a Spotify playlist URL when prompted.
+   * Enter a Public Spotify playlist URL when prompted.
    * Program is going to begin fetching releases and downloading tracks. This might take quite long for large playlists.
 
 ---
