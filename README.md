@@ -128,3 +128,5 @@ SpotSync/
 └── spotify_credentials.json
 ```
 ---
+##Contributors
+* [ios7jbpro](https://github.com/ios7jbpro)
