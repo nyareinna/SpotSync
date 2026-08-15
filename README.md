@@ -35,7 +35,7 @@ SpotSync is a Python script that parses Spotify playlists, identifies the full a
    ```
    
 3. **Install Core Dependencies (FFmpeg & Deno):**
-   Run the following commands sequentially to download and configure FFmpeg and Deno via spotDL:
+   Run the following commands dependin on you OS/Terminal to download and configure FFmpeg and Deno via spotDL:
 
    * **Linux / macOS / Windows (Command Prompt):**
    ```bash
