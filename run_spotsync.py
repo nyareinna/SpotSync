@@ -157,6 +157,7 @@ def main():
         "threads": 3, # 3 downloads at a time
         "audio_providers": ["youtube-music", "soundcloud", "bandcamp", "youtube"],
         "yt_dlp_args": "--extractor-args youtube:player_client=android,web_creator"
+        "ffmpeg_args": ["-vn"]  # Disables video streams completely
     }
 
     spotdl_client = Spotdl(
