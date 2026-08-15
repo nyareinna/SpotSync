@@ -65,6 +65,53 @@ SpotSync is a Python script that parses Spotify playlists, identifies the full a
 
 ---
 
+### Downloader Configuration
+
+The application uses the following default configuration in `run_downloader.py` (around line 152) to control how `spotdl` fetches, encodes, and saves music files:
+
+```python
+downloader_settings = {
+    "output": output_template,
+    "format": "m4a",
+    "bitrate": "128k",
+    "save_errors": SAVE_ERRORS_FILE,
+    "threads": 3,
+    "audio_providers": ["youtube-music", "soundcloud", "bandcamp", "youtube"],
+    "yt_dlp_args": "--extractor-args youtube:player_client=android,web_creator"
+}
+
+```
+
+### How to Customize Configuration
+
+To alter the default download config, edit the values inside the dictionary in `run_downloader.py`:
+
+* **Change Audio Format:** 
+  Replace `"m4a"` with `"mp3"` or `"opus"`.
+```
+"format": "mp3",
+```
+* **Adjust Bitrate:** 
+  Lower the bitrate for smaller file sizes (e.g., `"128k"`, `"192k"`, `"256k"`, or `"disable"` for non-re-encoded quality).
+  Anything over 128Kbps works only with YT Music Premium subscriptions and only up to 256Kbps. Learn how to import your cookies for YT music Premium (here)[https://github.com/spotDL/spotify-downloader/blob/master/docs/usage.md#audio-formats-and-quality]
+```
+"bitrate": "256k",
+```
+
+* **Change Parallel Downloads:** 
+  Adjust the thread count. Lower numbers reduce the risk of rate-limiting, while higher numbers speed up downloads on fast connections.
+```
+"threads": 1,
+```
+
+* **Reorder Audio Providers:** 
+  Rearrange or trim the list to modify provider search hierarchy.
+```
+"audio_providers": ["youtube-music", "youtube"],
+```
+
+---
+  
 ## Directory Layout
 ```bash
 SpotSync/
