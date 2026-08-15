@@ -38,11 +38,13 @@ SpotSync is a Python script that parses Public Spotify playlists, identifies the
    Run the following commands dependin on you OS/Terminal to download and configure FFmpeg and Deno via spotDL:
 
    * **Linux / macOS / Windows (Command Prompt):**
+     
    ```bash
      spotdl --download-ffmpeg && spotdl --download-deno
    ```
 
    * **Windows (PowerShell):**
+     
     ```bash
       spotdl --download-ffmpeg; spotdl --download-deno
     ```
