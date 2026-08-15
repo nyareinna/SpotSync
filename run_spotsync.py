@@ -146,7 +146,7 @@ def check_ffmpeg():
         print("Please install ffmpeg manually: https://ffmpeg.org/download.html")
         sys.exit(1)
 
-    print("[*] Attempting to install ffmpeg via winget...")
+    print("[INFO] Attempting to install ffmpeg via winget...")
     try:
         subprocess.run(
             ["winget", "install", "--id=Gyan.FFmpeg", "-e"],
@@ -155,7 +155,7 @@ def check_ffmpeg():
             text=True
         )
         print("[OK] ffmpeg installed successfully.")
-        print("[*] You may need to restart the terminal for PATH changes to take effect.")
+        print("[INFO] You may need to restart the terminal for PATH changes to take effect.")
         return True
     except subprocess.CalledProcessError as e:
         print(f"[X] Failed to install ffmpeg: {e.stderr}")
@@ -189,7 +189,7 @@ def main():
         "threads": 3, # 3 downloads at a time
         "audio_providers": ["youtube-music", "soundcloud", "bandcamp", "youtube"],
         "yt_dlp_args": "--extractor-args youtube:player_client=android,web_creator",
-        "ffmpeg_args": "-vn"  # Disables video streams completely
+        "ffmpeg_args": "-vn"
     }
 
     spotdl_client = Spotdl(
