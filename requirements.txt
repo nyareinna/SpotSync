@@ -1,0 +1,2 @@
+spotipy>=2.23.0
+spotdl>=4.2.0
