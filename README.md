@@ -66,7 +66,7 @@ SpotSync is a Python script that parses Spotify playlists, identifies the full a
 ---
 
 ## Directory Layout
-
+```bash
 SpotSync/
 ├── DownloadedMusics/
 │   ├── Artist Name/
@@ -76,5 +76,5 @@ SpotSync/
 ├── run_spotsync.py
 ├── requirements.txt
 └── spotify_credentials.json
-
+```
 ---
