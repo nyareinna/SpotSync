@@ -93,7 +93,7 @@ To alter the default download config, edit the values inside the dictionary in `
 ```
 * **Adjust Bitrate:** 
   Lower the bitrate for smaller file sizes (e.g., `"128k"`, `"192k"`, `"256k"`, or `"disable"` for non-re-encoded quality).
-  Anything over 128Kbps works only with YT Music Premium subscriptions and only up to 256Kbps. Learn how to import your cookies for YT music Premium (here)[https://github.com/spotDL/spotify-downloader/blob/master/docs/usage.md#audio-formats-and-quality]
+  Anything over 128Kbps works only with YT Music Premium subscriptions and only up to 256Kbps. Learn how to import your cookies for YT music Premium [here](https://github.com/spotDL/spotify-downloader/blob/master/docs/usage.md#audio-formats-and-quality)
 ```
 "bitrate": "256k",
 ```
