@@ -25,7 +25,7 @@ SpotSync is a Python script that parses Spotify playlists, identifies the full a
 
 1. **Clone the Repository:**
    ```bash
-   git clone [https://github.com/nyareinna/SpotSync.git](https://github.com/nyareinna/SpotSync.git)
+   git clone https://github.com/nyareinna/SpotSync.git
    cd SpotSync
    ```
 
