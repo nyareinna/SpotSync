@@ -80,6 +80,7 @@ downloader_settings = {
     "threads": 3,
     "audio_providers": ["youtube-music", "soundcloud", "bandcamp", "youtube"],
     "yt_dlp_args": "--extractor-args youtube:player_client=android,web_creator"
+    "ffmpeg_args": ["-vn"]
 }
 
 ```
