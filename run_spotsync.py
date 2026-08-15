@@ -1,5 +1,7 @@
 import json
 import os
+import shutil
+import subprocess
 import sys
 import time
 from spotdl import Spotdl
@@ -132,12 +134,42 @@ def download_songs_with_rate_limit(spotdl_client, songs):
             time.sleep(current_timeout)
             current_timeout = min(current_timeout * 2, MAX_TIMEOUT)
 
+def check_ffmpeg():
+    """Checks if ffmpeg is installed, attempts installation via winget if not."""
+    if shutil.which("ffmpeg"):
+        return True
+
+    print("[!] ffmpeg not found in PATH.")
+    
+    if not shutil.which("winget"):
+        print("[X] winget is not installed. Cannot install ffmpeg automatically.")
+        print("Please install ffmpeg manually: https://ffmpeg.org/download.html")
+        sys.exit(1)
+
+    print("[*] Attempting to install ffmpeg via winget...")
+    try:
+        subprocess.run(
+            ["winget", "install", "--id=Gyan.FFmpeg", "-e"],
+            check=True,
+            capture_output=True,
+            text=True
+        )
+        print("[OK] ffmpeg installed successfully.")
+        print("[*] You may need to restart the terminal for PATH changes to take effect.")
+        return True
+    except subprocess.CalledProcessError as e:
+        print(f"[X] Failed to install ffmpeg: {e.stderr}")
+        print("Please install ffmpeg manually: https://ffmpeg.org/download.html")
+        sys.exit(1)
+
 def main():
     # Clears the terminal screen
     os.system('cls' if os.name == 'nt' else 'clear')
     
     # Print the  banner
     print(SPOTSYNC_BANNER)
+
+    check_ffmpeg()
 
     client_id, client_secret = load_or_request_credentials()
 
