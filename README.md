@@ -1,3 +1,19 @@
+> [!CAUTION]
+> ### IMPORTANT DISCLAIMER & LEGAL NOTICE
+>
+> This project was developed strictly as an **educational exercise** and **proof of concept** to learn some programming principles, including:
+> * Programmatic integration and authentication using external APIs.
+> * Constructing, processing, and handling search queries dynamically.
+> * Inter-process communication and  interactions between distinct command-line tools.
+> * Implementing automated rate-limiting, batching, and retry/backoff logic.
+>
+> #### Intellectual Property & Usage Restrictions
+> * **No Copyrighted Material Stored:** This repository does not contain, host, or distribute any copyrighted media, proprietary files, or protected source code.
+> * **Non-Commercial Use:** This tool is intended solely for personal, non-commercial, and educational research purposes.
+> * **User Responsibility:** The developer of this tool expressly disclaims any liability for misuse or unlawful application of this software. End users are individually and entirely responsible for ensuring that their execution of this code complies with all applicable local copyright laws, intellectual property regulations, and the Terms of Service of any third-party platforms accessed.
+>
+> By cloning, running, or inspecting this software, you acknowledge that you are doing so for technical evaluation and accept full personal responsibility for how you utilize the provided code.
+
 # SpotSync
 SpotSync is a Python script that parses Public Spotify playlists, identifies the full album or release associated with each track, and downloads the entire album to help expand your local music library. It features automatic rate-limit management and exponential retry backoff logic for smooth, reliable downloads.
 
