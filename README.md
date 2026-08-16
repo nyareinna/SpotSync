@@ -12,7 +12,7 @@
 > * **Non-Commercial Use:** This tool is intended solely for personal, non-commercial, and educational research purposes.
 > * **User Responsibility:** The developer of this tool expressly disclaims any liability for misuse or unlawful application of this software. End users are individually and entirely responsible for ensuring that their execution of this code complies with all applicable local copyright laws, intellectual property regulations, and the Terms of Service of any third-party platforms accessed.
 >
-> By cloning, running, or inspecting this software, you acknowledge that you are doing so for technical evaluation and accept full personal responsibility for how you utilize the provided code.
+> By **cloning, running, or inspecting** this software, you acknowledge that you are doing so for technical evaluation and accept full personal responsibility for how you utilize the provided code.
 
 # SpotSync
 SpotSync is a Python script that parses Public Spotify playlists, identifies the full album or release associated with each track, and downloads the entire album to help expand your local music library. It features automatic rate-limit management and exponential retry backoff logic for smooth, reliable downloads.
@@ -96,7 +96,7 @@ downloader_settings = {
     "threads": 3,
     "audio_providers": ["youtube-music", "soundcloud", "bandcamp", "youtube"],
     "yt_dlp_args": "--extractor-args youtube:player_client=android,web_creator"
-    "ffmpeg_args": ["-vn"]
+    "ffmpeg_args": "-vn"
 }
 
 ```
